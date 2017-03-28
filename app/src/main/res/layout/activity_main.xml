@@ -1,0 +1,1285 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        tools:context="stopwatch.com.stopwatch.MainActivity"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:id="@+id/llayout1">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="5dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/pauseAll"
+                android:text="@string/pauseAllButton"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/startAll"
+                android:text="Start All"
+                android:visibility="gone"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/saveAll"
+                android:visibility="gone"
+                android:text="@string/saveAllButton"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/resetAll"
+                android:text="@string/resetAllButton"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <!-- Players 1 - 2 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="125dp">
+
+            <!-- Player 1 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/customborder">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="0dp"
+                    android:inputType="textPersonName"
+                    android:text="Aaron"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/Name1"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1" />
+
+                <Chronometer
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:textSize = "30sp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/chronometer1"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageButton
+                        android:text="@string/resetButton"
+                        android:background="@android:color/transparent"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/reset1"
+                        android:src="@drawable/redrestart"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/startButton"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/start1"
+                        android:src="@drawable/start"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/pauseButton"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/pause1"
+                        android:visibility="gone"
+                        android:src="@drawable/pause"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- End Player 1 -->
+
+
+            <!-- Player 2 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/customborder">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="0dp"
+                    android:inputType="textPersonName"
+                    android:text="Bardia"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/Name2"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    />
+
+                <Chronometer
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="00dp"
+                    android:textSize = "30sp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/chronometer2"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageButton
+                        android:text="@string/resetButton"
+                        android:background="@android:color/transparent"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/reset2"
+                        android:src="@drawable/redrestart"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/startButton"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/start2"
+                        android:src="@drawable/start"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/pauseButton"
+                        android:visibility="gone"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/pause2"
+                        android:src="@drawable/pause"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- End Player 2 -->
+        </LinearLayout>
+        <!-- End Players 1 - 2 -->
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+
+
+
+        <!-- Players 3 - 4 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="125dp">
+
+            <!-- Player 3 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/customborder">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="0dp"
+                    android:inputType="textPersonName"
+                    android:text="Colin"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/Name3"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    />
+
+                <Chronometer
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="00dp"
+                    android:textSize = "30sp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/chronometer3"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageButton
+                        android:text="@string/resetButton"
+                        android:background="@android:color/transparent"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/reset3"
+                        android:src="@drawable/redrestart"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/startButton"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/start3"
+                        android:src="@drawable/start"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/pauseButton"
+                        android:visibility="gone"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/pause3"
+                        android:src="@drawable/pause"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- End Player 3 -->
+
+
+            <!-- Player 4 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/customborder">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="0dp"
+                    android:inputType="textPersonName"
+                    android:text="Louis"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/Name4"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    />
+
+                <Chronometer
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:textSize = "30sp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/chronometer4"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageButton
+                        android:text="@string/resetButton"
+                        android:background="@android:color/transparent"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/reset4"
+                        android:src="@drawable/redrestart"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/startButton"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/start4"
+                        android:src="@drawable/start"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/pauseButton"
+                        android:visibility="gone"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/pause4"
+                        android:src="@drawable/pause"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- End Player 4 -->
+        </LinearLayout>
+        <!-- End Players 3 - 4 -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+
+
+
+
+
+        <!-- Players 5 - 6 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="125dp">
+
+            <!-- Player 5 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/customborder">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="0dp"
+                    android:inputType="textPersonName"
+                    android:text="Gabriel"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/Name5"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    />
+
+                <Chronometer
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:textSize = "30sp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/chronometer5"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageButton
+                        android:text="@string/resetButton"
+                        android:background="@android:color/transparent"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/reset5"
+                        android:src="@drawable/redrestart"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/startButton"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/start5"
+                        android:src="@drawable/start"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/pauseButton"
+                        android:visibility="gone"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/pause5"
+                        android:src="@drawable/pause"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- End Player 5 -->
+
+
+            <!-- Player 6 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/customborder">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="0dp"
+                    android:inputType="textPersonName"
+                    android:text="Jonathan"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/Name6"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    />
+
+                <Chronometer
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:textSize = "30sp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/chronometer6"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageButton
+                        android:text="@string/resetButton"
+                        android:background="@android:color/transparent"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/reset6"
+                        android:src="@drawable/redrestart"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/startButton"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/start6"
+                        android:src="@drawable/start"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/pauseButton"
+                        android:visibility="gone"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/pause6"
+                        android:src="@drawable/pause"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- End Player 6 -->
+        </LinearLayout>
+        <!-- End Players 5 - 6 -->
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+
+
+        <!-- Players 7 - 8 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="125dp">
+
+            <!-- Player 7 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/customborder">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="0dp"
+                    android:inputType="textPersonName"
+                    android:text="Justin"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/Name7"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    />
+
+                <Chronometer
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:textSize = "30sp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/chronometer7"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageButton
+                        android:text="@string/resetButton"
+                        android:background="@android:color/transparent"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/reset7"
+                        android:src="@drawable/redrestart"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/startButton"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/start7"
+                        android:src="@drawable/start"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/pauseButton"
+                        android:visibility="gone"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/pause7"
+                        android:src="@drawable/pause"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- End Player 7 -->
+
+
+            <!-- Player 8 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/customborder">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="0dp"
+                    android:inputType="textPersonName"
+                    android:text="Kaavya"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/Name8"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    />
+
+                <Chronometer
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:textSize = "30sp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/chronometer8"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageButton
+                        android:text="@string/resetButton"
+                        android:background="@android:color/transparent"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/reset8"
+                        android:src="@drawable/redrestart"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/startButton"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/start8"
+                        android:src="@drawable/start"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/pauseButton"
+                        android:visibility="gone"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/pause8"
+                        android:src="@drawable/pause"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- End Player 8 -->
+        </LinearLayout>
+        <!-- End Players 7 - 8 -->
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+
+
+        <!-- Players 9 - 10 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="125dp">
+
+            <!-- Player 9 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/customborder">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="0dp"
+                    android:inputType="textPersonName"
+                    android:text="Matt"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/Name9"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    />
+
+                <Chronometer
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:textSize = "30sp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/chronometer9"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageButton
+                        android:text="@string/resetButton"
+                        android:background="@android:color/transparent"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/reset9"
+                        android:src="@drawable/redrestart"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/startButton"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/start9"
+                        android:src="@drawable/start"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/pauseButton"
+                        android:visibility="gone"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/pause9"
+                        android:src="@drawable/pause"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- End Player 9 -->
+
+
+            <!-- Player 10 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/customborder">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="0dp"
+                    android:inputType="textPersonName"
+                    android:text="Matthew"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/Name10"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    />
+
+                <Chronometer
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:textSize = "30sp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/chronometer10"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageButton
+                        android:text="@string/resetButton"
+                        android:background="@android:color/transparent"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/reset10"
+                        android:src="@drawable/redrestart"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/startButton"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/start10"
+                        android:src="@drawable/start"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/pauseButton"
+                        android:visibility="gone"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/pause10"
+                        android:src="@drawable/pause"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- End Player 10 -->
+        </LinearLayout>
+        <!-- End Players 9 - 10 -->
+
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+
+
+        <!-- Players 11 - 12 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="125dp">
+
+            <!-- Player 11 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/customborder">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="0dp"
+                    android:inputType="textPersonName"
+                    android:text="Prakash"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/Name11"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    />
+
+                <Chronometer
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:textSize = "30sp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/chronometer11"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageButton
+                        android:text="@string/resetButton"
+                        android:background="@android:color/transparent"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/reset11"
+                        android:src="@drawable/redrestart"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/startButton"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/start11"
+                        android:src="@drawable/start"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/pauseButton"
+                        android:visibility="gone"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/pause11"
+                        android:src="@drawable/pause"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- End Player 11 -->
+
+
+            <!-- Player 12 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/customborder">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="0dp"
+                    android:inputType="textPersonName"
+                    android:text="Rodrigo"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/Name12"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    />
+
+                <Chronometer
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:textSize = "30sp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/chronometer12"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageButton
+                        android:text="@string/resetButton"
+                        android:background="@android:color/transparent"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/reset12"
+                        android:src="@drawable/redrestart"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/startButton"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/start12"
+                        android:src="@drawable/start"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/pauseButton"
+                        android:visibility="gone"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/pause12"
+                        android:src="@drawable/pause"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- End Player 12 -->
+        </LinearLayout>
+        <!-- End Players 11 - 12 -->
+
+
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+
+
+        <!-- Players 13 - 14 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="125dp">
+
+            <!-- Player 13 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/customborder">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="0dp"
+                    android:inputType="textPersonName"
+                    android:text="Shafi"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/Name13"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    />
+
+                <Chronometer
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:textSize = "30sp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/chronometer13"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageButton
+                        android:text="@string/resetButton"
+                        android:background="@android:color/transparent"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/reset13"
+                        android:src="@drawable/redrestart"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/startButton"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/start13"
+                        android:src="@drawable/start"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/pauseButton"
+                        android:visibility="gone"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/pause13"
+                        android:src="@drawable/pause"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- End Player 13 -->
+
+
+            <!-- Player 14 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/customborder">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="0dp"
+                    android:inputType="textPersonName"
+                    android:text="TJ"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/Name14"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    />
+
+                <Chronometer
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:textSize = "30sp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/chronometer14"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageButton
+                        android:text="@string/resetButton"
+                        android:background="@android:color/transparent"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/reset14"
+                        android:src="@drawable/redrestart"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/startButton"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/start14"
+                        android:src="@drawable/start"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/pauseButton"
+                        android:visibility="gone"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/pause14"
+                        android:src="@drawable/pause"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- End Player 14 -->
+        </LinearLayout>
+        <!-- End Players 13 - 14 -->
+
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+
+
+        <!-- Players 15 - 16 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="125dp">
+
+            <!-- Player 15 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/customborder">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="0dp"
+                    android:inputType="textPersonName"
+                    android:text="Trey"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/Name15"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    />
+
+                <Chronometer
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:textSize = "30sp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/chronometer15"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageButton
+                        android:text="@string/resetButton"
+                        android:background="@android:color/transparent"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/reset15"
+                        android:src="@drawable/redrestart"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/startButton"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/start15"
+                        android:src="@drawable/start"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/pauseButton"
+                        android:visibility="gone"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/pause15"
+                        android:src="@drawable/pause"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- End Player 15 -->
+
+
+            <!-- Player 16 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/customborder">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="0dp"
+                    android:inputType="textPersonName"
+                    android:text="Player"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/Name16"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    />
+
+                <Chronometer
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:textSize = "30sp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/chronometer16"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageButton
+                        android:text="@string/resetButton"
+                        android:background="@android:color/transparent"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/reset16"
+                        android:src="@drawable/redrestart"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/startButton"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/start16"
+                        android:src="@drawable/start"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="@string/pauseButton"
+                        android:visibility="gone"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/pause16"
+                        android:src="@drawable/pause"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- End Player 16 -->
+        </LinearLayout>
+        <!-- End Players 15 - 16 -->
+
+
+    </LinearLayout>
+</ScrollView>

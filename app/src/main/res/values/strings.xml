@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Playing Timer</string>
+    <string name="playerName">Player Name</string>
+    <string name="startButton">Start</string>
+    <string name="pauseButton">Pause</string>
+    <string name="resetButton">Reset</string>
+    <string name="pauseAllButton">Pause All</string>
+    <string name="resetAllButton">Reset All</string>
+    <string name="saveAllButton">Send Email</string>
+    <string name="startAllButton">Start All</string>
+    <string name="saveNames">Save Names</string>
+
+</resources>
