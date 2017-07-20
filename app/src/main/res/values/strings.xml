@@ -9,5 +9,6 @@
     <string name="saveAllButton">Send Email</string>
     <string name="startAllButton">Start All</string>
     <string name="saveNames">Save Names</string>
+	<string name="saveNames2">Save Names2</string>
 
 </resources>
